@@ -4,7 +4,7 @@
 #include <WiFiClient.h>
 #include <WebServer.h>
 #include <DNSServer.h>
-#include <ESP8266mDNS.h>    // yes this is correct
+//#include <ESP8266mDNS.h>    // yes this is correct
 #include <EEPROM.h>         // simulated EEPROM: https://arduino-pico.readthedocs.io/en/latest/eeprom.html
 #include <CRC32.h>
 

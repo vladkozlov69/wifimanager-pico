@@ -37,7 +37,6 @@ WiFiManager::WiFiManager(const char *apName, const char *apPassword, bool serial
     strncpy(_apSSID, apName, 32);
     strncpy(_apPassword, apPassword, 32);
 
-    _hero_img = ::hero_img;
     _title = "PicoW";
 
 // FIXME: Is this in the correct location...
@@ -289,7 +288,6 @@ void WiFiManager::handleRoot() const
 
     sendStandardHeaders();
     String html(root_template);
-    html.replace("${hero.img}",           hero_img);
     html.replace("${firmware.name}",      _name);
     html.replace("${firmware.shortname}", _shortname);
     html.replace("${firmware.maker}",     _maker);
@@ -317,7 +315,6 @@ void WiFiManager::handleWifi() const
 {
     sendStandardHeaders();
     String html(wifi_template);
-    html.replace("${hero.img}", hero_img);
     html.replace("${img.lock}", lock_img);
 
     String htmlNetworks;
