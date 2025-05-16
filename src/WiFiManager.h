@@ -20,8 +20,11 @@
 
 class WiFiManager
 {
+private:
+    DNSServer * _dnsServer;
+    WebServer * _webServer;
 public:
-    WiFiManager(char const *apName, char const *apPassword, bool serialLog = false);
+    WiFiManager(DNSServer * dnsServer, WebServer * webServer, char const *apName, char const *apPassword, bool serialLog = false);
     ~WiFiManager();
 
     bool autoConnect();
